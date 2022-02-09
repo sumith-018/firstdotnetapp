@@ -30,7 +30,7 @@ namespace tempdotnet1
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "tempdotnet1", Version = "v1" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "tempdotnet1_updated", Version = "v2" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace tempdotnet1
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "tempdotnet1 v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v2/swagger.json", "tempdotnet1_updated v1"));
             }
 
             app.UseHttpsRedirection();
